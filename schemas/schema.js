@@ -6,6 +6,8 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 import page from "./documents/page";
 import navigation from "./documents/navigation";
 import siteSettings from "./documents/siteSettings";
+import contact from "./documents/contact";
+
 import navigationSection from "./objects/navigationSection";
 import navigationLink from "./objects/navigationLink";
 import gallery from "./objects/gallery";
@@ -20,6 +22,15 @@ export default createSchema({
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
-    navigation, navigationSection, navigationLink, siteSettings, page, gallery, textBlock, form, hero
+    navigation,
+    navigationSection,
+    navigationLink,
+    siteSettings,
+    contact,
+    page,
+    gallery,
+    textBlock,
+    form,
+    hero,
   ]),
 });

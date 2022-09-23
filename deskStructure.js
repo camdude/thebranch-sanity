@@ -28,8 +28,11 @@ export default () =>
                 ),
             ])
         ),
+      S.listItem()
+        .title("Contact Information")
+        .child(S.document().schemaType("contact").documentId("contact")),
       // We also need to remove the new singletons from the main list
       ...S.documentTypeListItems().filter(
-        (listItem) => !["siteSettings", "navigation"].includes(listItem.getId())
+        (listItem) => !["siteSettings", "navigation", "contact"].includes(listItem.getId())
       ),
     ]);
