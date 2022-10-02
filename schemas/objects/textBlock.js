@@ -1,10 +1,18 @@
 import { H1, H2, H3, H4, H5, H6 } from "../documents/pageStyles";
 import button from "./button";
+import image from "./image";
+import youtube from "./youtube";
+import fileUpload from "./fileUpload";
 
 export default {
   name: "textBlock",
   type: "object",
   title: "Text Block",
+  preview: {
+    select: {
+      title: 'content'
+    }
+  },
   fields: [
     {
       name: "content",
@@ -62,6 +70,21 @@ export default {
           marks: {
             annotations: [
               {
+                name: 'internalLink',
+                type: 'object',
+                title: 'Internal link',
+                fields: [
+                  {
+                    name: 'reference',
+                    type: 'reference',
+                    title: 'Reference',
+                    to: [
+                      { type: 'page' },
+                    ]
+                  }
+                ]
+              },
+              {
                 name: "link",
                 type: "object",
                 title: "External link",
@@ -82,6 +105,9 @@ export default {
           },
         },
         button,
+        image,
+        youtube,
+        fileUpload
       ],
     },
     {

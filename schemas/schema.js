@@ -7,13 +7,9 @@ import page from "./documents/page";
 import navigation from "./documents/navigation";
 import siteSettings from "./documents/siteSettings";
 import contact from "./documents/contact";
-
-import navigationSection from "./objects/navigationSection";
 import navigationLink from "./objects/navigationLink";
-import gallery from "./objects/gallery";
-import textBlock from "./objects/textBlock";
-import form from "./objects/form";
-import hero from "./objects/hero";
+import sermon from "./documents/sermon";
+import sermonSeries from "./documents/sermonSeries";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -23,14 +19,11 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     navigation,
-    navigationSection,
     navigationLink,
     siteSettings,
     contact,
+    sermon,
+    sermonSeries,
     page,
-    gallery,
-    textBlock,
-    form,
-    hero,
   ]),
 });

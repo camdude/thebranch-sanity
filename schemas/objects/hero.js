@@ -15,14 +15,9 @@ export default {
       title: "Subtitle",
     },
     {
-      name: "buttonText",
-      type: "string",
-      title: "Button Text",
-    },
-    {
-      name: "buttonLink",
-      type: "url",
-      title: "Button Link",
-    },
+      name: "image",
+      type: "image",
+      title: "Background Image",
+    }
   ],
 };

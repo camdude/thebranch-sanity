@@ -1,3 +1,5 @@
+import navigationLink from "./navigationLink";
+
 export default {
     name: 'navigation.section',
     type: 'object',
@@ -19,7 +21,7 @@ export default {
         type: 'array',
         name: 'links',
         title: 'Links',
-        of: [{ type: 'navigation.link' }],
+        of: [navigationLink],
       },
     ],
   }

@@ -1,8 +1,10 @@
+import navigationSection from "../objects/navigationSection";
+
 export default {
   name: "navigation",
   title: "Navigation",
   type: "document",
-  __experimental_actions: ['update', /* 'create', 'delete', */ 'publish'],
+  __experimental_actions: ["update", /* 'create', 'delete', */ "publish"],
   fields: [
     {
       type: "string",
@@ -18,13 +20,13 @@ export default {
       type: "array",
       name: "sections",
       title: "Sections",
-      of: [{ type: "navigation.section" }],
+      of: [navigationSection],
     },
     {
-      type: 'reference',
+      type: "reference",
       name: "homepage",
       title: "Homepage",
-      to: [{ type: 'page' }],
+      to: [{ type: "page" }],
     },
   ],
 };

@@ -31,8 +31,26 @@ export default () =>
       S.listItem()
         .title("Contact Information")
         .child(S.document().schemaType("contact").documentId("contact")),
+      S.listItem()
+        .title("Sermons")
+        .child(
+          S.list()
+            .title("Sermon Details")
+            .items(
+              S.documentTypeListItems().filter((listItem) =>
+                ["sermonSeries"].includes(listItem.getId())
+              )
+            )
+        ),
       // We also need to remove the new singletons from the main list
       ...S.documentTypeListItems().filter(
-        (listItem) => !["siteSettings", "navigation", "contact"].includes(listItem.getId())
+        (listItem) =>
+          ![
+            "siteSettings",
+            "navigation",
+            "contact",
+            "sermon",
+            "sermonSeries",
+          ].includes(listItem.getId())
       ),
     ]);
