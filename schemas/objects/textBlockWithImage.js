@@ -22,6 +22,19 @@ export default {
       },
     },
     {
+      name: "layout",
+      title: "Layout",
+      type: "string",
+      options: {
+        list: [
+          { title: "Image Left", value: "left" },
+          { title: "Image Right", value: "right" },
+        ],
+        layout: "radio",
+      },
+      initialValue: 'left'
+    },
+    {
       name: "cta",
       title: "Call to Action",
       type: "object",

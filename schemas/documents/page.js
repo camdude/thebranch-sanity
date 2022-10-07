@@ -1,7 +1,9 @@
 import banner from "../objects/banner";
 import form from "../objects/form";
 import gallery from "../objects/gallery";
+import headingBlock from "../objects/headingBlock.";
 import hero from "../objects/hero";
+import imageGrid from "../objects/imageGrid";
 import textBlock from "../objects/textBlock";
 import textBlockWithImage from "../objects/textBlockWithImage";
 
@@ -38,7 +40,7 @@ export default {
       name: "pageBuilder",
       type: "array",
       title: "Page Builder",
-      of: [banner, textBlock, textBlockWithImage, gallery, form, hero],
+      of: [banner, headingBlock, textBlock, textBlockWithImage, imageGrid, gallery, form, hero],
       validation: (Rule) => {
         return Rule.required();
       },
@@ -47,6 +49,7 @@ export default {
       name: "slug",
       title: "Slug",
       type: "slug",
+      description: "URL for page (i.e. 'visit-us')",
       validation: (Rule) => {
         return Rule.required();
       },

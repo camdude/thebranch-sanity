@@ -3,6 +3,7 @@ import button from "./button";
 import image from "./image";
 import youtube from "./youtube";
 import fileUpload from "./fileUpload";
+import { FaLink, FaExternalLinkAlt } from "react-icons/fa";
 
 export default {
   name: "textBlock",
@@ -73,6 +74,7 @@ export default {
                 name: 'internalLink',
                 type: 'object',
                 title: 'Internal link',
+                icon: FaLink,
                 fields: [
                   {
                     name: 'reference',
@@ -88,6 +90,7 @@ export default {
                 name: "link",
                 type: "object",
                 title: "External link",
+                icon: FaExternalLinkAlt,
                 fields: [
                   {
                     name: "href",
