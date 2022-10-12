@@ -38,7 +38,7 @@ export default () =>
             .title("Sermon Details")
             .items(
               S.documentTypeListItems().filter((listItem) =>
-                ["sermonSeries"].includes(listItem.getId())
+                ["sermonSeries", "sermon", "preacher"].includes(listItem.getId())
               )
             )
         ),

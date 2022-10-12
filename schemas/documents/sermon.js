@@ -7,26 +7,32 @@ export default {
       name: "title",
       type: "string",
       title: "Title",
+      validation: Rule => Rule.required()
     },
     {
       name: "passage",
       type: "string",
       title: "Bible Passage",
+      validation: Rule => Rule.required()
     },
     {
       name: "preacher",
-      type: "string",
+      type: "reference",
       title: "Preacher",
+      to: [{ type: "preacher" }],
+      validation: Rule => Rule.required()
     },
     {
       name: "series",
-      type: "string",
+      type: "reference",
       title: "Sermon Series",
+      to: [{ type: "sermonSeries" }],
     },
     {
       name: "date",
       type: "date",
       title: "Date",
+      validation: Rule => Rule.required()
     },
     {
       name: "description",

@@ -10,6 +10,7 @@ import contact from "./documents/contact";
 import navigationLink from "./objects/navigationLink";
 import sermon from "./documents/sermon";
 import sermonSeries from "./documents/sermonSeries";
+import preacher from "./documents/preacher";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -24,6 +25,7 @@ export default createSchema({
     contact,
     sermon,
     sermonSeries,
+    preacher,
     page,
   ]),
 });

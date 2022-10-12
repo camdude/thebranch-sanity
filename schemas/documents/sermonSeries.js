@@ -7,6 +7,12 @@ export default {
         name: "title",
         type: "string",
         title: "Title",
+        validation: Rule => Rule.required()
+      },
+      {
+        name: "thumbnail",
+        type: "image",
+        title: "Thumbnail",
       },
       {
         name: "description",
