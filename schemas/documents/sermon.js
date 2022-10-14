@@ -10,6 +10,12 @@ export default {
       validation: Rule => Rule.required()
     },
     {
+      name: "subtitle",
+      type: "string",
+      title: "Subtitle",
+      description: "For podcasting purposes, if relevant"
+    },
+    {
       name: "passage",
       type: "string",
       title: "Bible Passage",
